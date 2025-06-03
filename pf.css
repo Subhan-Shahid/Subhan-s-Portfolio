@@ -120,7 +120,7 @@ body {
 }
 
         .skills h2 {
-            color: white;
+            color: goldenrod;
             margin-bottom: 8%;
             font-size: 250%;
             white-space: nowrap;
@@ -170,7 +170,7 @@ body {
         }
 
         .projects-sec h2{
-            color: white;
+            color: goldenrod;
             font-size: 250%;
             margin-top: 7%;
             /* margin-bottom: 10%; */
@@ -265,7 +265,7 @@ body {
 
 
         .contact-sec h1{
-            color: rgb(240, 240, 59);
+            color: goldenrod;
             text-align: center;
             padding-top: 5%;
             font-size: 250%;
