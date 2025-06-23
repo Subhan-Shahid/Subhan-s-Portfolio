@@ -120,7 +120,7 @@ body {
 }
 
         .skills h2 {
-            color: goldenrod;
+            color: white;
             margin-bottom: 8%;
             font-size: 250%;
             white-space: nowrap;
@@ -265,7 +265,7 @@ body {
 
 
         .contact-sec h1{
-            color: goldenrod;
+            color: rgb(240, 240, 59);
             text-align: center;
             padding-top: 5%;
             font-size: 250%;
@@ -321,3 +321,8 @@ body {
             margin-bottom: 15%;
         }
 
+        #ai-vid{
+            width: 100%;
+            mix-blend-mode: lighten;
+            display: inline;
+        }
