@@ -38,3 +38,14 @@ bboot.addEventListener('click', function(){
         stybp.style.display = "inline-block";
     }
 })
+
+function revealSkillCards() {
+    document.querySelectorAll('.skill-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            card.classList.add('visible');
+        }
+    });
+}
+window.addEventListener('scroll', revealSkillCards);
+window.addEventListener('load', revealSkillCards);
