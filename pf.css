@@ -139,19 +139,26 @@ body {
         }
         
         .skill-card {
+            opacity: 0;
+            transform: translateY(20px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
             transition: all .3s ease;
             margin: 3%;
+            background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
         }
 
         .skill-card:hover {
-            transform: translateY(-5px)
+            transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 50px rgba(11, 243, 243, 0.434);
+    background: linear-gradient(135deg, #2a2a2a, #333);
         }
 
         .card-body{
-            background-color: black;
-            border-radius: 20px;
-            color: white;
+             background-color: #121212;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: background 0.3s ease;
         }
 
         .card-body-js{
@@ -162,8 +169,17 @@ body {
             color: white;
         }
         .card-body i{
-            color: white;
+             color: skyblue;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
         }
+
+        .skill-card:hover .card-body i {
+    transform: scale(1.2);
+    color: #1e2222;
+    text-shadow: 0 0 10px #7a8889, 0 0 20px #dcf7c2;
+}
 
         .projects-sec{
             margin-bottom: 8%;
@@ -326,3 +342,15 @@ body {
             mix-blend-mode: lighten;
             display: inline;
         }
+
+        /* Fade-in-up animation */
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
