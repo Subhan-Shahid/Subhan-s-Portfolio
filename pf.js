@@ -47,5 +47,26 @@ function revealSkillCards() {
         }
     });
 }
-window.addEventListener('scroll', revealSkillCards);
+// Toggle navbar glass effect on scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Use IntersectionObserver for better performance
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // animate once
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+
 window.addEventListener('load', revealSkillCards);
